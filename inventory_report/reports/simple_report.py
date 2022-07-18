@@ -17,10 +17,10 @@ class SimpleReport():
             if item["nome_da_empresa"]:
                 empresas.append(item["nome_da_empresa"])
 
-        contador = print(Counter(empresas).most_common()[0][0])
+        contador = Counter(empresas).most_common()[0][0]
 
-        return [
+        return (
             f"Data de fabricação mais antiga: {min(data_fabricacao)}\n"
             f"Data de fabricação mais antiga: {min(data_vencido)}\n"
-            f"Data de fabricação mais antiga: {contador}\n"
-        ]
+            f"Data de fabricação mais antiga: {contador}"
+        )
