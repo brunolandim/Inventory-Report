@@ -1,5 +1,6 @@
 import csv
 import json
+import pandas as pd
 from ..reports.simple_report import SimpleReport
 from ..reports.complete_report import CompleteReport
 
@@ -32,6 +33,3 @@ class Inventory():
         elif report == 'completo':
             lista = Inventory.get_file_type(path)
             return CompleteReport.generate(lista)
-
-lista = Inventory.import_data('inventory_report/data/inventory.csv','simples')
-print(lista)
