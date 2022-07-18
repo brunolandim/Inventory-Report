@@ -12,7 +12,7 @@ def test_relatorio_produto():
         instrucoes_de_armazenamento="Manter longe do Thanos",
     )
 
-    assert str(product) == ( 
+    assert str(product) == (
         f"O produto {product.nome_do_produto}"
         f" fabricado em {product.data_de_fabricacao}"
         f" por {product.nome_da_empresa} com validade"
