@@ -12,10 +12,10 @@ def test_cria_produto():
         instrucoes_de_armazenamento="Manter longe do Thanos",
     )
 
-    assert produto.id == 1
-    assert produto.nome_do_produto == "Marreta Biônoca"
-    assert produto.nome_da_empresa == "Chapolin"
-    assert produto.data_de_fabricacao == "13/01/2000"
-    assert produto.data_de_validade == "13/01/2022"
-    assert produto.numero_de_serie == "131506"
-    assert produto.instrucoes_de_armazenamento == "Manter longe do Thanos"
+    assert product.id == 1
+    assert product.nome_do_produto == "Marreta Biônoca"
+    assert product.nome_da_empresa == "Chapolin"
+    assert product.data_de_fabricacao == "13/01/2000"
+    assert product.data_de_validade == "13/01/2022"
+    assert product.numero_de_serie == "131506"
+    assert product.instrucoes_de_armazenamento == "Manter longe do Thanos"
