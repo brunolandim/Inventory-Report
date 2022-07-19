@@ -1,6 +1,6 @@
 import csv
 import json
-import pandas as pd
+import xml.etree.ElementTree as ET
 from ..reports.simple_report import SimpleReport
 from ..reports.complete_report import CompleteReport
 
@@ -20,10 +20,13 @@ class Inventory():
                 lista_de_items = [item for item in lista]
                 return lista_de_items
 
-        elif 'xml' in path:
-            file = pd.read_xml(path)
-            lista_de_items = file.to_dict('records')
-            return lista_de_items
+        elif "xml" in path:
+            with open(path, encoding='utf-8') as file:
+                root = ET.parse(file).getroot()
+                return [
+                    {child.tag: child.text for child in item}
+                    for item in root.findall('record')
+                ]
 
     @staticmethod
     def import_data(path, report):

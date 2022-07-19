@@ -8,5 +8,4 @@ flake8==4.0.1
 pytest==7.0.1
 pytest-cov==2.10.1
 pytest-json==0.4.0
-pandas==1.4.3
 git+https://github.com/betrybe/pytest-dependency

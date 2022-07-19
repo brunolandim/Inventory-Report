@@ -1,8 +1,9 @@
 from datetime import datetime
-from typing import Counter
+from collections import Counter
 
 
 class SimpleReport():
+    @staticmethod
     def generate(data):
         data_fabricacao = []
         data_vencido = []
@@ -17,7 +18,7 @@ class SimpleReport():
             if item["nome_da_empresa"]:
                 empresas.append(item["nome_da_empresa"])
 
-        contador = Counter(empresas).most_common(1)[0][0]
+        contador = Counter(empresas).most_common()[0][0]
 
         return (
             f"Data de fabricação mais antiga: {min(data_fabricacao)}\n"
